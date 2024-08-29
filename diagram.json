@@ -1,0 +1,43 @@
+{
+    "version": 1,
+    "author": "Anonymous maker",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-arduino-mega", "id": "mega", "top": 0, "left": 0, "attrs": {} },
+      { "type": "wokwi-potentiometer", "id": "pot1", "top": 315.5, "left": 307, "attrs": {} },
+      {
+        "type": "wokwi-lcd1602",
+        "id": "lcd1",
+        "top": -156.8,
+        "left": 514.4,
+        "attrs": { "pins": "i2c" }
+      },
+      { "type": "wokwi-dht22", "id": "dht1", "top": 105.9, "left": 503.4, "attrs": {} },
+      { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": 329.6, "left": 20, "attrs": {} },
+      { "type": "wokwi-ds1307", "id": "rtc1", "top": 301.8, "left": 489.7, "attrs": {} },
+      { "type": "chip-rain-sensor", "id": "chip3", "top": 269.82, "left": 14.4, "attrs": {} }
+    ],
+    "connections": [
+      [ "lcd1:GND", "mega:GND.1", "black", [ "h-326.4", "v9.6" ] ],
+      [ "lcd1:VCC", "mega:5V.2", "red", [ "h0" ] ],
+      [ "lcd1:SDA", "mega:20", "green", [ "h0" ] ],
+      [ "lcd1:SCL", "mega:21", "green", [ "h0" ] ],
+      [ "ldr1:VCC", "mega:VIN", "red", [ "h0" ] ],
+      [ "ldr1:GND", "mega:GND.3", "black", [ "h28.8", "v-86.8", "h-38.4" ] ],
+      [ "ldr1:AO", "mega:A0", "green", [ "h19.2", "v-0.7" ] ],
+      [ "pot1:GND", "mega:GND.3", "black", [ "v28.8", "h-96", "v-163.2", "h-9.6" ] ],
+      [ "pot1:SIG", "mega:A1", "green", [ "v57.6", "h-125.2" ] ],
+      [ "pot1:VCC", "mega:VIN", "red", [ "v76.8", "h-106.4", "v-240", "h-57.6", "v-38.4" ] ],
+      [ "dht1:GND", "mega:GND.5", "black", [ "v48", "h-163.2", "v9.6" ] ],
+      [ "rtc1:GND", "mega:GND.4", "black", [ "h-124.8", "v-19.2" ] ],
+      [ "rtc1:5V", "mega:5V.1", "red", [ "h-96", "v-355.6", "h-48" ] ],
+      [ "rtc1:SDA", "mega:20", "green", [ "h-76.8", "v-355.5", "h-96" ] ],
+      [ "dht1:VCC", "mega:5V", "red", [ "v38.4", "h-240", "v-57.6", "h-9.6" ] ],
+      [ "dht1:SDA", "mega:2", "green", [ "v28.8", "h-76.7", "v-259.2", "h-38.4" ] ],
+      [ "chip3:VCC", "mega:3.3V", "red", [ "h0", "v-48", "h153.6" ] ],
+      [ "chip3:GND", "mega:GND.2", "black", [ "h0", "v28.8", "h0" ] ],
+      [ "chip3:AO", "mega:A2", "green", [ "h107.41" ] ],
+      [ "chip3:DO", "mega:4", "green", [ "v19.2", "h-151.79", "v-326.4", "h0" ] ]
+    ],
+    "dependencies": {}
+  }
