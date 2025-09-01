@@ -1,4 +1,4 @@
-The ipynb file contains the actual implementation of the weather condition prediction models.
+The ipynb files contains the actual implementation of the weather condition prediction models.
 
 The rest of the files are the to be opened and run in 'wokwi' simulator.
 
